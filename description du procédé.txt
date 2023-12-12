@@ -1,0 +1,30 @@
+Nom: Diop
+Prénom: Mohamed
+
+							Exercice 1:
+
+
+Technologie utilisée: MS Sql server Management studio
+Le fichier csv a été importé directement sur la base de donnée créée dans MSSQL dans la table avec pour seules colonnes:
+	-Code_commune_Insee
+	-Nom_de_la_commune
+	-Code_postal
+L'utilisateur A les droits suivants:
+	-Select
+	-Update
+	-Delete(sous permission)
+	-Insert
+J'ai aussi définit un backup automatique qui se déroule tous les 5 jours(une plus longue durée aurait été mieux)
+Et enfin je l'ai exporté en .bacpac pour pouvoir directement importer et tester dans votre MsSql management studio
+
+
+							Exercice 2 (les différents scripts python sont commentés pas-à-pas pour la compréhension)
+Technologies utilisées: Python pour les différents scryptes, MS SQL pour le stockage des données
+-Trigger créé avec 2 méthodes 
+	une requête Sql dans MS SQL mai aussi avec un script python(voir le fichier joint "trigger.py");
+-La création de la vue s'est fait avec un script python connecté à la base de données MS SQL où la vue est créée;
+-Les informations de la population sont récupèrée gâce au code insee et insèrée directement à la table dans MS SQL( dans le fichier mssql.py);
+		ps: Le fichier obtenu par le lien "https://api.gouv.fr/documentation/api-geo"
+			  manque des codes postales;
+
+
